@@ -7,7 +7,7 @@ var:
     version: 0.7.1
 provision:
   - url:
-      from: http://sourceforge.net/projects/netcat/files/netcat/0.7.1/netcat-0.7.1.tar.gz
+      from: http://sourceforge.net/projects/netcat/files/netcat/{{ .xbee.version }}/netcat-{{ .xbee.version }}.tar.gz
       wget: true
 
 build:
