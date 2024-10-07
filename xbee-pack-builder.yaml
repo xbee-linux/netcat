@@ -1,7 +1,5 @@
 schema-version: 1.0
 
-type: builder
-
 var:
   xbee:
     version: 0.7.1
@@ -11,10 +9,10 @@ provision:
       wget: true
 
 build:
-  shell:
-    cmds:
-      - ./configure
-      - make
-      - make install DESTDIR={{ .xbee.out }}
-    directory: "{{ .xbee.src }}/netcat-{{ .xbee.version }}"
+  - shell:
+      cmds:
+        - ./configure
+        - make
+        - make install DESTDIR={{ .xbee.out }}
+      directory: "{{ .xbee.src }}/netcat-{{ .xbee.version }}"
 
