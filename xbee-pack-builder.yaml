@@ -10,7 +10,7 @@ provision:
 
 build:
   - shell:
-      cmds:
+      cmd:
         - ./configure
         - make
         - make install DESTDIR={{ .xbee.out }}
